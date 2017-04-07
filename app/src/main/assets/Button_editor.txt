@@ -22,6 +22,9 @@ btn.setOnClickListener(new View.OnClickListener() {
         new AssignTask().execute();
     }
 });
+//btn.doneLoagingAnimation(ContextCompat.getColor(MainActivity.this, R.color.black)
+//                , BitmapFactory.decodeResource(getResources(), R.drawable.ic_alarm_on_white_48dp));
+//        btn.revertAnimation();
 
  public class AssignTask extends AsyncTask<Void,Void,Void>{
 
