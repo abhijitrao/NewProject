@@ -1,0 +1,53 @@
+<br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+            android:id="@+id/btn_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/cWhite"
+            android:background="@drawable/button_rounded_enable"
+            app:spinning_bar_width="4dp"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="8dp"
+            app:spinning_bar_color="#FFF"
+            app:spinning_bar_padding="6dp"/>
+
+
+private CircularProgressButton btn;
+btn = (CircularProgressButton) findViewById(R.id.btn_id);
+btn.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        new AssignTask().execute();
+    }
+});
+
+ public class AssignTask extends AsyncTask<Void,Void,Void>{
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            btn.startAnimation();
+            btn.setBackgroundResource(R.drawable.button_rounded_enable);
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+//            btn.revertAnimation();
+//            btn.setBackgroundResource(R.drawable.button_rounded_done);
+            btn.doneLoagingAnimation(ContextCompat.getColor(MainActivity.this, R.color.color_button_done)
+                    , BitmapFactory.decodeResource(getResources(), R.drawable.ic_alarm_on_white_48dp));
+        }
+}
