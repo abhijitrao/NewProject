@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_whitespace"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <RelativeLayout
+            android:id="@+id/llappFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginRight="@dimen/horizontal_margin">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_popup_rounded"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/horizontal_margin"
+                                android:gravity="bottom|left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/iv_profile"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@mipmap/ic_launcher" />
+
+                                <TextView
+                                    android:id="@+id/tv_popup_title"
+                                    style="@style/tvHeading"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="@dimen/horizontal_margin"
+                                    android:text="Feedback!!"
+                                    android:textColor="@color/cGreen"
+                                    android:textSize="25sp" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/horizontal_margin"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/et_alert_feedback"
+                                    style="@style/EditText"
+                                    android:background="@drawable/et_multi_row"
+                                    android:gravity="left"
+                                    android:hint="Enter your feedback here"
+                                    android:inputType="textMultiLine"
+                                    android:lines="6"
+                                    android:textColorHint="@color/cHint"
+                                    android:maxLines="6" />
+
+                            </LinearLayout>
+
+
+                            <Button
+                                android:id="@+id/btn_popup"
+                                style="@style/Button_Action"
+                                android:layout_width="wrap_content"
+                                android:layout_marginBottom="@dimen/vertical_margin"
+                                android:text="Send Feedback"
+                                android:textAllCaps="false"
+                                android:textSize="17sp" />
+                        </LinearLayout>
+
+                    </ScrollView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

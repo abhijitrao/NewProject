@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">NewApp</string>
+
+    <string name="signup_mobile_msg1" translatable="false">By proceeding further you agree to our</string>
+    <string name="signup_mobile_msg2" translatable="false">AppsFeature</string>
+    <string name="signup_mobile_msg3" translatable="false">TERMS OF USE</string>
+
+    <!--Internet tags start-->
+    <string name="internet_error_tag" translatable="false">Internet Connection Error</string>
+    <string name="internet_error_msg" translatable="false">Please connect to working Internet connection</string>
+    <string name="server_time_out_tag" translatable="false">Internet Connection</string>
+    <string name="server_time_out_msg" translatable="false">Slow internet response. Please try after some time.</string>
+    <string name="server_error_reporting_tag" translatable="false">Server Error</string>
+    <string name="server_error_reporting_msg" translatable="false">The server encountered an internal error or misconfiguration and was unable to complete your request. Please report us this error to help fix the problem and improve this application.</string>
+    <!--Internet tags end-->
+
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+</resources>
